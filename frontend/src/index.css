@@ -1,0 +1,236 @@
+html{
+  font-size:62.5%;
+  box-sizing: border-box;
+}
+body{
+  font-size: 1.6rem;
+  height: 100vh;
+  margin: 0;
+  font-family: Helvetica !important;
+}
+.grid-conatiner{
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  grid-template-columns: 1fr;
+ grid-template-rows: 5rem 1fr 5rem;
+ height: 100%;    
+ }
+.header{
+  color: #ffffff;
+  background-color: #203040;
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;   
+}
+.brand a{
+  color:#fff;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-decoration: none;
+  
+}
+.brand a:hover{
+  color: #ff8000;
+}
+.header-links a {
+  color:#fff;
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+.header-links a:hover{
+  color: #ff8000;
+
+}
+.main{
+  grid-area: main;
+}
+.footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+/* home main section */
+.products{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.products li{
+  flex:0 1 34rem;
+  margin:1rem;
+  height: 50rem;
+  border-bottom: 1px solid #c0c0c0;
+}
+.products img{
+  width: 34rem;
+  max-height: 34rem;
+}
+.product{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-name{
+font-size: 2rem;
+text-decoration: none;
+font-weight: bolder;
+}
+.product-name a{
+  text-decoration: none;
+}
+ a:hover{
+  color: #ff8000;
+}
+.product-brand{
+  font-size: 1.5rem;
+  color: #404040;
+}
+.product-price{
+  font-size: 2rem;
+}
+.brand button{
+  color: #fff;
+  font-size: 3rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.sidebar{
+  transform: translate(-30rem);
+  width: 30rem;
+  position: fixed;
+  background-color:#f0f0f0;
+  height: 100%;
+  transition: all .5sec;
+      
+}
+.sidebar.open{
+  transform:translate(0);
+  padding: 0.5rem;
+}
+.cross_button_section{
+  border-radius: 50%;
+  border:0.1rem #000 solid;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: absolute;
+top: 2.5rem;
+padding: 0.5rem;
+right: 0.5em;
+}
+#root{
+  height: 100%;
+}
+.details{
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 1rem
+}
+.details img{
+   flex: 2 1 60rem;
+}
+.details .details-info{
+  flex: 1 1 15rem;
+}
+.details .details-action{
+  flex: 1 1 15rem;
+}
+.details-info ul,.details-action ul{list-style: none;padding: 0;}
+.details-info li,.details-action li{margin-bottom: 1rem;}
+.back-to-results{padding: 1rem;}
+.back-to-results a{text-decoration: none;}
+
+.details-action{border: 0.1rem solid #808080;
+  border-radius: 0.5rem;
+  background: #f8f8f8;
+  padding: 1rem;}
+  .details-action ul li:last-child{
+    display: flex;
+    flex-direction: column;
+  }
+  .add_to_cart{
+    padding: 1rem;
+    border:0.1rem solid #808080;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #f0c000;
+    text-decoration: none;
+  }
+  .add_to_cart:hover{
+    border:0.1rem solid #404040 ;
+
+  }
+  .cart{
+   display: flex;
+   flex-wrap: wrap;
+
+  }
+  .cart-list{flex: 1 1 80rem;padding: 1rem;}
+  .cart-list ul{list-style-type: none;padding: 0;}
+  .cart-action{flex: 1 1 20rem;margin: 1rem;background: #e0e0e0;padding: 1rem;border-radius: .5rem;display: flex;flex-direction: column;}
+  .cart-image img{max-width: 10rem;max-width: 10rem;}
+  .cart-container {display: flex;}
+  .Cart-Name { flex: 8 1;}
+  .cart-price{flex: 1 1;font-size: 2rem;text-align: right;}
+  .cartlist_container > li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid silver;}
+  .add_to_cart_delete{margin-left: 10px;}
+  .cartlist_container h2{margin: 0;}
+  .cart-container{width: 100%;}
+  button{font-size: 1.6rem;}
+
+  /* for form */
+
+  .Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .form-conatiner{
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border-radius: .5rem;
+  border:0.1rem solid #f0f0f0 ;
+  list-style: none;
+}
+.form-conatiner li{
+  margin-bottom: 1.2rem;
+  flex-direction: column;
+  display: flex;
+}
+input{
+  padding: 1rem;
+  border:0.1 solid #c0c0c0;
+  border-radius: 0.5rem;
+}
+.form-conatiner ul li{
+padding: 0;
+}
+a:hover{
+  text-decoration: none;
+}
